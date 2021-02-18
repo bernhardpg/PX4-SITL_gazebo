@@ -164,6 +164,8 @@ private:
   bool send_odometry_{false};
 
   std::vector<physics::JointPtr> joints_;
+  std::vector<physics::JointPtr> joints_second_; // Allows two joints to be connected to the same input channel
+  std::vector<bool> joint_controls_two_actuators_;
   std::vector<common::PID> pids_;
   std::vector<double> joint_max_errors_;
 
